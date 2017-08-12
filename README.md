@@ -1,10 +1,9 @@
 # QSDispatchQueue
 
---
 
 **A Way to control maxConcurrentCount of GCD concurrent queue by dispatch_semaphore**(利用GCD的信号量机制实现控制GCD并发队列最大并发数的方案)
 
-##Installation
+#Installation
 
 	pod 'QSDispatchQueue'
 	
@@ -14,7 +13,7 @@
 	
 	#import "QSDispatchQueue.h"
 
-##Usage-Demo1
+#Usage-Demo1
 
 	dispatch_queue_t workConcurrentQueue = dispatch_queue_create("com.jzp.async.queue", DISPATCH_QUEUE_CONCURRENT);
     QSDispatchQueue *queue = [[QSDispatchQueue alloc]initWithQueue:workConcurrentQueue concurrentCount:3];
@@ -26,7 +25,7 @@
         }];
     }
 
-##Usage-Demo2
+#Usage-Demo2
 
 	dispatch_queue_t workConcurrentQueue = dispatch_queue_create("com.jzp.sync.queue", DISPATCH_QUEUE_CONCURRENT);
     QSDispatchQueue *queue = [[QSDispatchQueue alloc]initWithQueue:workConcurrentQueue concurrentCount:1];
@@ -39,7 +38,7 @@
     }
 
 
-##Relation
+#Relation
 
-	[iOS实录16：GCD小结之控制最大并发数](http://www.jianshu.com/p/5d51a367ed62)
+	http://www.jianshu.com/p/5d51a367ed62
 

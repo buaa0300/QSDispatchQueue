@@ -103,7 +103,7 @@ static const NSUInteger kMaxConcurrentCount = 32;    //最大并发数
             _queue = queue;
         }
         
-        _concurrentCount = MIN(concurrentCount, kMaxConcurrentCount);
+        concurrentCount = MIN(concurrentCount, kMaxConcurrentCount);
         if (concurrentCount < kDefaultConcurrentCount) {
             concurrentCount = kDefaultConcurrentCount;
         }
